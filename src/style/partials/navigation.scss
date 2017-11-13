@@ -1,0 +1,18 @@
+
+
+.navigation {
+  background-color: map-get($color-scheme-one, dirty-blue);
+  .navbar-brand {
+    img {
+      width: 95px;
+      height: 100%;
+    }
+  }
+
+  .dropdown-toggle{
+
+    &:after {
+      display: none;
+    }
+  }
+}
