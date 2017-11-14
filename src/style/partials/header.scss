@@ -1,0 +1,39 @@
+
+
+.jumbotron {
+  background: linear-gradient(
+                  rgba(254, 98, 25, 0.4392156862745098),
+                  rgba(77, 102, 133, 0.6)),
+              url("../../image/12.jpg") center fixed;
+  background-size: cover;
+  height: auto;
+
+  .container {
+    padding: 30px;
+
+    h2 {
+      color: map_get($color-scheme-one, snow-white);
+      font-size: 30px;
+      font-family: GothamBold, serif;
+    }
+
+    p {
+      color: map_get($color-scheme-one, snow-white);
+    }
+
+    .btn-primary {
+      background-color: map_get($color-scheme-one, ginger);
+      border-color: map_get($color-scheme-one, bright-orange);
+
+      &:hover {
+        background-color: map_get($color-scheme-one, bright-orange);
+      }
+
+      &:focus {
+        background-color: map_get($color-scheme-one, bright-orange);
+        box-shadow: none;
+      }
+    }
+
+  }
+}

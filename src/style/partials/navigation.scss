@@ -4,7 +4,7 @@
   background-color: map-get($color-scheme-one, dirty-blue);
   min-width: 350px;
 
-  .container {
+  .container-fluid {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
