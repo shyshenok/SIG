@@ -4,31 +4,49 @@
   background-color: map-get($color-scheme-one, dirty-blue);
   min-width: 350px;
 
-  .container-fluid {
+  .container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     .navbar {
       justify-content: flex-start;
       flex-wrap: nowrap;
-    }
+      @media (max-width: 992px)  {
+        padding: 0;
+      }
 
+      @media (min-width: 992px)  {
+        .half-navbar {
+          display: flex;
+        }
+      }
+      .navbar-toggler {
+        margin: 12px 0;
+      }
+    }
   }
 
   .navbar-brand {
-    margin: 0 24px;
+    margin: 0 4px;
     img {
-      width: 95px;
+      width: 60px;
       height: 100%;
+      @media (min-width: 992px)  {
+        width: 95px
+      }
     }
   }
 
   .select-language {
-    height: 76px;
+    height: 60px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-end;
+    @media (min-width: 992px)  {
+      height: 76px;
+      margin-right: 0;
+    }
     .dropdown-item {
       &:hover {
         background-color: darken(map-get($color-scheme-one, dirty-blue), 7%);
@@ -52,6 +70,15 @@
         display: none;
       }
     }
+    .dropdown-menu {
+      @media (max-width: 992px) {
+        transform: none !important;
+        left: -36% !important;
+        right: 0;
+        top: 100% !important;
+      }
+    }
+
     .dropdown-menu.show {
       background-color: map-get($color-scheme-one, dirty-blue);
       padding: 0;
