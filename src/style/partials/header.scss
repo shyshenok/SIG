@@ -4,12 +4,18 @@
   background: linear-gradient(
                   rgba(254, 98, 25, 0.4392156862745098),
                   rgba(77, 102, 133, 0.6)),
-              url("../../image/12.jpg") center fixed;
+              url("../../image/12.jpg") 47% fixed;
   background-size: cover;
-  height: auto;
+  height: 600px;
+
 
   .container {
     padding: 30px;
+    height: 100%;
+
+    .row {
+      height: 100%;
+    }
 
     h2 {
       color: map_get($color-scheme-one, snow-white);
@@ -24,6 +30,7 @@
     .btn-primary {
       background-color: map_get($color-scheme-one, ginger);
       border-color: map_get($color-scheme-one, bright-orange);
+      margin: 12px 0;
 
       &:hover {
         background-color: map_get($color-scheme-one, bright-orange);
