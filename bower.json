@@ -18,6 +18,7 @@
     "normalize.css": "*",
     "jQuery": "2.*",
     "bootstrap": "4.0.0-beta",
-    "fontawesome": "4.7.0"
+    "fontawesome": "4.7.0",
+    "masonry" : "masonry#^4.2.0"
   }
 }
