@@ -36,15 +36,21 @@ function setBackground(width, height) {
 }
 
 function addSelectLanguage() {
-    var temp = function (event) {
-        console.log(event);
-    }
+
+    var selectedElement;
+
+    $('.dropdown-menu').on('click', 'p', function(event) {
+        if (selectedElement !== event.target.id) {
+            $('.top-lang-icon').attr("src", $(event.target).find("img").attr("src"));
+        }
+       selectedElement =  event.target.id;
+
+    });
+
     for(var i = 0; i < languages.length; i++) {
         $(".dropdown-menu").append("<p id="+'lang-id'+ i + " class='dropdown-item lang-icon-item'>" +
                                     languages[i].name + "<img class='lang-icon' src=" +
                                     languages[i].image + " alt='English'></p>");
-        console.log($("lang-id"+i));
-        $("lang-id"+i).click(temp);
     }
 
 }
