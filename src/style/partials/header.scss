@@ -1,45 +1,65 @@
+.wrapper-header {
 
+  .jumbotron {
+    background: linear-gradient(
+                    rgba(map_get($color-scheme-one, bright-orange), 0.5),
+                    rgba(map_get($color-scheme-one, dirty-blue),  0.5)),
+    url("../../image/12.jpg") 47% fixed;
+    background-size: cover;
+    height: 600px;
 
-.jumbotron {
-  background: linear-gradient(
-                  rgba(254, 98, 25, 0.4392156862745098),
-                  rgba(77, 102, 133, 0.6)),
-              url("../../image/12.jpg") 47% fixed;
-  background-size: cover;
-  height: 600px;
-
-  .container {
-    padding: 30px;
-    height: 100%;
-
-    .row {
+    .container {
+      padding: 30px;
       height: 100%;
-    }
 
-    h2 {
-      color: map_get($color-scheme-one, snow-white);
-      font-size: 30px;
-      font-family: GothamBold, serif;
-    }
+      .row {
+        height: 100%;
 
-    p {
-      color: map_get($color-scheme-one, snow-white);
-    }
-
-    .btn-primary {
-      background-color: map_get($color-scheme-one, ginger);
-      border-color: map_get($color-scheme-one, bright-orange);
-      margin: 12px 0;
-
-      &:hover {
-        background-color: map_get($color-scheme-one, bright-orange);
+        form {
+          display: flex;
+          flex-flow: column wrap;
+          padding: 60px;
+          background-color: rgba(map_get($color-scheme-one, dirty-blue), 0.6);
+          .input-group {
+            flex-flow: column wrap;
+            input {
+              padding: 10px;
+              margin: 8px 0;
+            }
+          }
+          button {
+            width: 100%;
+          }
+        }
       }
 
-      &:focus {
-        background-color: map_get($color-scheme-one, bright-orange);
-        box-shadow: none;
+      h2 {
+        color: map_get($color-scheme-one, snow-white);
+        font-size: 30px;
+        font-family: GothamBold, serif;
+      }
+
+      p {
+        color: map_get($color-scheme-one, snow-white);
+      }
+
+      .btn-primary {
+        background-color: map_get($color-scheme-one, ginger);
+        border-color: map_get($color-scheme-one, ginger);
+        margin: 12px 0;
+
+        &:hover {
+          background-color: map_get($color-scheme-one, bright-orange);
+          border-color: map_get($color-scheme-one, bright-orange);
+        }
+
+        &:focus {
+          background-color: map_get($color-scheme-one, bright-orange);
+          border-color: map_get($color-scheme-one, bright-orange);
+          box-shadow: none;
+        }
       }
     }
-
   }
 }
+
