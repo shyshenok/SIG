@@ -44,13 +44,9 @@
                 <div class="nav-item dropdown select-language">
                     <p>Lang: </p>
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="lang-icon" src="../image/eng.png" alt="english">
+                        <img class="lang-icon top-lang-icon" src="../image/eng.png" alt="english">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <p class="dropdown-item">English<img class="lang-icon" src="../image/eng.png" alt="English"></p>
-                        <p class="dropdown-item">Russian<img class="lang-icon" src="../image/ru.png" alt="Russian"></p>
-                        <p class="dropdown-item">Urainian<img class="lang-icon" src="../image/uk.png" alt="Urainian"></p>
-                    </div>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
                 </div>
         </section>
     </section>
@@ -58,15 +54,30 @@
         <header class="container-fluid">
             <div class="jumbotron">
                 <div class="container">
-                    <h2 class="display-2">Hello, world!</h2>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                    </p>
-                </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-5">
+                            <h2 class="display-2">Hello, world!</h2>
+                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                            <hr class="my-4">
+                            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-5 ml-auto justify-content-end">
+                            <form action="#">
+                                <h2>We are will call you!</h2>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Your number">
+                                    <input type="text" placeholder="Your name">
+                                </div>
         
+                                <button class="btn btn-primary btn-lg">Call me!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <i class="fa fa-angle-down down-arrow" aria-hidden="true"></i>
             </div>
         </header>
     </section>
