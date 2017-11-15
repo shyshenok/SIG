@@ -23,6 +23,11 @@
       .navbar-toggler {
         margin: 12px 0;
       }
+      button {
+        &:focus {
+          outline: 5px auto #889bb3;
+        }
+      }
     }
   }
 
