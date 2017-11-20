@@ -15,25 +15,14 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    padding: 20px 10px;
     color: map_get($color-scheme-one, snow-white);
     @media(max-width: 576px) {
       border-bottom: 4px solid #fff;
     }
+
     div {
-      border: 22px solid transparent;
-      padding: 10px;
-      transition: 0.5s ease;
-      @media(min-width: 576px) {
-        border: 18px solid transparent;
-        padding: 5px;
-      }
-      @media(min-width: 992px) {
-        border: 25px solid transparent;
-        padding: 22px;
-      }
-      &:hover {
-        border-color: #fff;
-      }
+      padding: 30px;
     }
 
     h3 {
@@ -95,6 +84,9 @@
     @media (min-width: 576px) {
       border-bottom: 4px solid #fff
     }
+    &:hover {
+      background: lighten(rgba(map_get($color-scheme-one, bright-orange), 0.9), 10%);
+    }
   }
   .block-2{
     background: linear-gradient(rgba(map_get($color-scheme-one, pale-diry-blue), 1),
@@ -111,6 +103,9 @@
       border-right: 6px solid #fff;
       border-bottom: 6px solid #fff;
     }
+    &:hover {
+      background: lighten(rgba(map_get($color-scheme-one, pale-diry-blue), 0.9), 10%);
+    }
   }
   .block-3 {
     background: linear-gradient(rgba(map_get($color-scheme-one, ginger), 1),
@@ -122,6 +117,9 @@
       border-top: 4px solid #fff;
       border-left: 4px solid #fff;
       border-bottom: 4px solid #fff;
+    }
+    &:hover {
+      background: lighten(rgba(map_get($color-scheme-one, ginger), 0.9), 10%);
     }
   }
   .block-4 {
@@ -139,6 +137,9 @@
       border-right: 6px solid #fff;
       border-bottom: 6px solid #fff;
     }
+    &:hover {
+      background: lighten(rgba(map_get($color-scheme-one, dirty-blue), 0.9), 10%);
+    }
   }
   .block-5 {
     background: linear-gradient(rgba(map_get($color-scheme-one, sun-yellow), 1),
@@ -148,6 +149,9 @@
     order: 5;
     @media(min-width: 576px) {
       border-right: 4px solid #fff;
+    }
+    &:hover {
+      background: lighten(rgba(map_get($color-scheme-one, sun-yellow), 0.8), 10%);
     }
   }
   .block-6 {
@@ -164,6 +168,9 @@
       border-left: 6px solid #fff;
       border-right: 6px solid #fff;
       border-top: 6px solid #fff;
+    }
+    &:hover {
+      background: lighten(rgba(map_get($color-scheme-one, dark-grey), 0.9), 10%);
     }
   }
 }
