@@ -19,6 +19,7 @@ var languages = [
 ];
 
 $(document).ready(function() {
+
     var height = $(window).height() - $(".wrapper-navigation").height();
     var width = $(window).width();
 
