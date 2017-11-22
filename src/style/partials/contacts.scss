@@ -1,0 +1,60 @@
+
+
+.wrapper-contacts{
+  .row {
+    margin: 0;
+  }
+
+  .map {
+    padding: 0;
+    @media (min-width: 992px) {
+      padding-left: 0;
+    }
+  }
+
+  .contact-info {
+    height: 450px;
+    background: linear-gradient(
+                    rgba(map_get($color-scheme-one, bright-orange), 0.6),
+                    rgba(map_get($color-scheme-one, dirty-blue), 0.6)),
+    url("../../image/sity2.jpg") bottom center scroll;
+    background-size: cover;
+    color: map_get($color-scheme-one, snow-white);
+
+    a {
+      color: map_get($color-scheme-one, snow-white);
+    }
+
+    h2 {
+      color: map_get($color-scheme-one, snow-white);
+      font-weight: 700;
+      font-size: 30px;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .wrapper-icon {
+      padding: 8px;
+      display: inline;
+    }
+
+    .contact-link {
+      padding: 4px;
+      transition: 0.3s ease;
+      i {
+        font-size: 20px;
+      }
+      a {
+        &:hover {
+          color: darken(map_get($color-scheme-one, snow-white), 10%);
+          text-decoration: none;
+          border-bottom: 1px solid darken(map_get($color-scheme-one, snow-white), 10%);
+        }
+      }
+      address {
+        display: inline;
+      }
+    }
+  }
+
+}
