@@ -1,14 +1,4 @@
 
-@font-face {
-  font-family: GothamReg;
-  src: url("../../fonts/GothamRegular.otf")
-}
-
-@font-face {
-  font-family: GothamBold;
-  src: url("../../fonts/GothamBold.otf")
-}
-
 * {
   box-sizing: border-box;
 }
@@ -16,7 +6,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  font-family: GothamReg, serif;
+  font-family: 'Comfortaa', cursive;
 }
 
 .container-fluid {

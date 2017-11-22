@@ -39,7 +39,7 @@
 
       h2 {
         color: map_get($color-scheme-one, snow-white);
-        font-family: GothamBold, serif;
+        font-weight: 600;
         @media(min-width: 768px) {
           font-size: 30px;
 
