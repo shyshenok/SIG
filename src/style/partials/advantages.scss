@@ -1,0 +1,33 @@
+
+.wrapper-advantages {
+
+  .row {
+    margin: 0;
+    padding: 80px 0;
+
+  }
+
+  .advantages {
+    padding: 40px;
+    text-align: center;
+    .wrapper-icon {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-color: map_get($color-scheme-one, pale-diry-blue);
+      margin: 16px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .zmdi {
+        font-size: 40px;
+        color: map_get($color-scheme-one, snow-white);
+      }
+    }
+    h3, p {
+      color: map_get($color-scheme-one, dirty-blue);
+    }
+  }
+
+}
+

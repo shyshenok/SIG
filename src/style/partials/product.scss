@@ -118,6 +118,11 @@
       border-left: 4px solid #fff;
       border-bottom: 4px solid #fff;
     }
+    @media (min-width: 992px) {
+      border-bottom: none;
+      border-top: none;
+    }
+
     &:hover {
       background: lighten(rgba(map_get($color-scheme-one, ginger), 0.9), 10%);
     }
