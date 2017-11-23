@@ -1,0 +1,74 @@
+
+
+.wrapper-footer {
+  height: 100px;
+  .footer-town {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    h2 {
+      padding: 20px;
+      font-weight: 700;
+    }
+    height: 100px;
+    background: url("../../image/footer_town.png") no-repeat left;
+    background-size: 475px;
+  }
+
+  .footer-info-wrapper {
+    background-color: rgba(map_get($color-scheme-one, dirty-blue), 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    .footer-info {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+    .contact-link {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      color: map_get($color-scheme-one, snow-white);
+      padding: 2px 0;
+      .wrapper-icon {
+        padding:  0 8px;
+        margin: 0;
+        font-size: 20px;
+      }
+      a {
+        color: map_get($color-scheme-one, snow-white);
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          text-decoration: none;
+          color: darken(map_get($color-scheme-one, snow-white), 20%);
+          border-bottom: 1px solid darken(map_get($color-scheme-one, snow-white), 20%);
+        }
+      }
+    }
+    .separator {
+      display: flex;
+      flex-direction: row;
+    }
+  .developer {
+    justify-content: flex-end;
+    color: map_get($color-scheme-one, snow-white);
+    padding: 0 20px;
+    a {
+      color: map_get($color-scheme-one, snow-white);
+      border-bottom: 1px solid transparent;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 18xkpx;
+
+      &:hover {
+        text-decoration: none;
+        color: darken(map_get($color-scheme-one, snow-white), 20%);
+        border-bottom: 1px solid darken(map_get($color-scheme-one, snow-white), 20%);
+      }
+    }
+  }
+
+  }
+}
