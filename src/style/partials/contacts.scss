@@ -7,13 +7,15 @@
 
   .map {
     padding: 0;
+    order: 2;
     @media (min-width: 992px) {
       padding-left: 0;
     }
   }
 
   .contact-info {
-    height: 450px;
+    order: 1;
+    height: 500px;
     background: linear-gradient(
                     rgba(map_get($color-scheme-one, bright-orange), 0.6),
                     rgba(map_get($color-scheme-one, dirty-blue), 0.6)),
@@ -30,7 +32,7 @@
       font-weight: 700;
       font-size: 30px;
       text-align: center;
-      padding: 30px;
+      padding: 40px;
     }
 
     .wrapper-icon {
@@ -41,6 +43,7 @@
     .contact-link {
       padding: 4px;
       transition: 0.3s ease;
+      text-align: center;
       i {
         font-size: 20px;
       }
