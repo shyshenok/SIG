@@ -39,10 +39,9 @@
 
       h2 {
         color: map_get($color-scheme-one, snow-white);
-        font-weight: 600;
+        text-align: left;
         @media(min-width: 768px) {
           font-size: 30px;
-
         }
       }
 

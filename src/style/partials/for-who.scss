@@ -1,0 +1,36 @@
+
+
+.wrapper-for-who {
+  padding: 20px 40px 100px;
+
+  .row {
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      
+      .icon {
+        height: 120px;
+        width: 120px;
+        margin: 0 auto 8px;
+      }
+
+      .bg-1 {
+        background: url("../../image/icons.jpg") -444px 514px;
+      }
+
+      .bg-2 {
+        background: url("../../image/icons.jpg") -285px 523px;
+      }
+
+      .bg-3 {
+        background: url("../../image/icons.jpg") -605px 686px;
+      }
+
+      .bg-4 {
+        background: url("../../image/icons.jpg") -605px 519px;
+      }
+    }
+  }
+
+
+}
