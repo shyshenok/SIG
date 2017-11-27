@@ -17,6 +17,6 @@
 //= ../../bower_components/bootstrap/js/dist/tooltip.js
 //= ../../bower_components/bootstrap/js/dist/popover.js
 
-//= ../../bower_components/masonry/dist/masonry.pkgd.min.js
 
+//= partials/timer.js
 //= partials/app.js

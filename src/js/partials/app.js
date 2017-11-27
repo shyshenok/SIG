@@ -20,6 +20,26 @@ var languages = [
 
 $(document).ready(function() {
 
+    $('.svg-test-1').svgTimer();
+    $('.svg-test-2').svgTimer({
+        time: 120,
+        interval: 0.2
+
+
+    });
+    $('.svg-test-3').svgTimer({
+        time: 60,
+        interval: 60
+
+
+    });
+    $('.svg-test-4').svgTimer({
+        time: 10,
+        interval: 10
+
+
+    });
+
     var height = $(window).height() - $(".wrapper-navigation").height();
     var width = $(window).width();
 
