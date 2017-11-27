@@ -2,8 +2,10 @@
 
   .jumbotron {
     background: linear-gradient(
-                    rgba(map_get($color-scheme-one, bright-orange), 0.5),
-                    rgba(map_get($color-scheme-one, dirty-blue),  0.5)),
+                    rgba(map_get($color-scheme-one, pale-turquoise), 0.2),
+                    rgba(map_get($color-scheme-one, sun-yellow), 0.6),
+                    rgba(map_get($color-scheme-one, bright-orange), 0.6),
+                    rgba(map_get($color-scheme-one, dirty-blue), 0.6)),
     url("../../image/12.jpg") 47% fixed;
     background-size: cover;
     min-height: 600px;
@@ -40,6 +42,7 @@
       h2 {
         color: map_get($color-scheme-one, snow-white);
         text-align: left;
+        padding: 0;
         @media(min-width: 768px) {
           font-size: 30px;
         }
