@@ -1,18 +1,37 @@
 .wrapper-timer {
 
+  background-color: map_get($color-scheme-one, dirty-blue);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 100px 40px 100px;
+  padding: 20px 40px 100px;
+
+
+  .row {
+    padding: 30px 20px 0;
+  }
+
+  h2 {
+    color: map_get($color-scheme-one, snow-white);
+  }
 
   .svg-test-1,
   .svg-test-2,
   .svg-test-3,
   .svg-test-4 {
-    height: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    color: map_get($color-scheme-one, snow-white);
 
+
+    h3 {
+      order: 2;
+      text-align: center;
+      padding: 16px 8px;
+    }
 
     .svg-hexagonal-counter {
+      order: 1;
       position: relative;
       float: left;
       width: 100%;
@@ -29,7 +48,6 @@
 
       .counter{
         width: 240px;
-
         height: 240px;
         cursor: default;
 
