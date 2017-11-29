@@ -22,6 +22,9 @@
       order: 1;
       width: 100%;
       margin: 0 auto 30px;
+      @media (min-width: 480px) {
+        max-height: 700px;
+      }
       @media(min-width: 992px) {
         order: 2;
       }
