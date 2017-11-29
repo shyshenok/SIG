@@ -1,11 +1,139 @@
 
+@mixin after($height, $width, $background-color,  $top, $deg){
+  content: "";
+  display: block;
+  position: absolute;
+  height: $height;
+  width: $width;
+  background-color: $background-color;
+  top: $top;
+  transform: rotate($deg);
+}
 
 .wrapper-application {
+  color: map_get($color-scheme-one, dirty-blue);
+
   .row {
     margin: 0;
-
+    padding: 0 0 60px;
+    align-items: center;
+    justify-content: center;
     .application-screen {
+      order: 1;
+      width: 100%;
+      margin: 0 auto 30px;
+      @media(min-width: 992px) {
+        order: 2;
+      }
+      .wrapper-image {
+        max-height: 600px;
+      }
+    }
 
+    .application-item-right,
+    .application-item-left {
+      order:2;
+
+      ul {
+        margin-bottom: 0;
+        li {
+          padding: 8px 0;
+        }
+      }
+      @media(min-width: 992px) {
+        ul {
+          padding: 0 20px;
+          li {
+            padding: 10px 0;
+            list-style: none;
+          }
+        }
+      }
+    }
+
+    .application-item-left {
+      @media(min-width: 992px) {
+        order: 1;
+        li:first-child {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 14%, 10deg);
+            right: -42px;
+          }
+        }
+        li:nth-child(2) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 25%, 0deg);
+            right: -42px;
+          }
+        }
+        li:nth-child(3) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 40%, 0deg);
+            right: -42px;
+          }
+        }
+        li:nth-child(4) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 55%, 0deg);
+            right: -42px;
+          }
+        }
+        li:nth-child(5) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 69%, 0deg);
+            right: -42px;
+          }
+        }
+        li:nth-child(6) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 86%, -10deg);
+            right: -42px;
+          }
+        }
+      }
+    }
+    .application-item-right {
+      @media(min-width: 992px) {
+        text-align: right;
+        order: 2;
+        li:first-child {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 14%, -10deg);
+            left: -42px;
+
+          }
+        }
+        li:nth-child(2) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 25%, 0deg);
+            left: -42px;
+          }
+        }
+        li:nth-child(3) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 40%, 0deg);
+            left: -42px;
+          }
+        }
+        li:nth-child(4) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 55%, 0deg);
+            left: -42px;
+          }
+        }
+        li:nth-child(5) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 69%, 0deg);
+            left: -42px;
+          }
+        }
+        li:nth-child(6) {
+          &:after {
+            @include after(2px, 70px, map_get($color-scheme-one, bright-orange), 86%, 10deg);
+            left: -42px;
+          }
+        }
+      }
     }
   }
 }
