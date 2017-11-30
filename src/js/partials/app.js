@@ -20,26 +20,48 @@ var languages = [
 
 $(document).ready(function() {
 
-    $('.svg-test-1').svgTimer();
-    $('.svg-test-2').svgTimer({
-        time: 120,
-        interval: 0.2
+    var a = 0;
+    $(window).scroll(function() {
 
+        var oTop = $('#counter').offset().top - window.innerHeight;
+
+
+
+        if (a === 0 && $(window).scrollTop() > oTop) {
+            $('.counter').each(function (){
+                var parentEl = $(this);
+                parentEl.append("<path class='track' d='M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z'></path>" +
+                    "<path class='fill' d='M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z'></path>" );
+                parentEl.html(parentEl.html());
+            });
+            $('.counter-value').each(function() {
+
+                var $this = $(this),
+                    countTo = $this.attr('data-count'),
+                    suffix = $this.attr('suffix');
+
+                $({
+
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    },
+                    {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function() {
+                            $this.text(Math.floor(this.countNum)+suffix);
+                        },
+                        complete: function() {
+                            $this.text(this.countNum+suffix);
+                        }
+
+                    });
+            });
+            a = 1;
+        }
 
     });
-    $('.svg-test-3').svgTimer({
-        time: 60,
-        interval: 60
-
-
-    });
-    $('.svg-test-4').svgTimer({
-        time: 10,
-        interval: 10
-
-
-    });
-
     var height = $(window).height() - $(".wrapper-navigation").height();
     var width = $(window).width();
 

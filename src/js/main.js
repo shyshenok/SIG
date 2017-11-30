@@ -18,5 +18,4 @@
 //= ../../bower_components/bootstrap/js/dist/popover.js
 
 
-//= partials/timer.js
 //= partials/app.js
