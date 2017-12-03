@@ -14,6 +14,11 @@
     color: map_get($color-scheme-one, snow-white);
   }
 
+  h3 {
+    text-align: center;
+    padding: 10px 0;
+  }
+
   .svg-hexagonal-counter {
     min-height: 200px;
     display: flex;
