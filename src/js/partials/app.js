@@ -20,6 +20,11 @@ var languages = [
 
 $(document).ready(function() {
 
+    addSelectLanguage();
+
+    $(window).resize(setBackground);
+    setBackground();
+
     var a = 0;
     $(window).scroll(function() {
 
@@ -69,17 +74,20 @@ $(document).ready(function() {
         }
 
     });
-    var height = $(window).height() - $(".wrapper-navigation").height();
-    var width = $(window).width();
 
-    setBackground(width, height);
-    addSelectLanguage();
 });
 
-function setBackground(width, height) {
+function setBackground() {
+    var width = $(window).width();
+    var height = $(window).height()- $(".wrapper-navigation").height();
     if(width >= 992) {
         $('.jumbotron').css({
             'height' : height,
+            'width' : width
+        });
+    } else {
+        $('.jumbotron').css({
+            'height' : '100%',
             'width' : width
         });
     }
