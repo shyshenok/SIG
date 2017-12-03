@@ -25,8 +25,6 @@ $(document).ready(function() {
 
         var oTop = $('#counter').offset().top - window.innerHeight;
 
-
-
         if (a === 0 && $(window).scrollTop() > oTop) {
             $('.counter').each(function (){
                 var parentEl = $(this);
@@ -40,20 +38,29 @@ $(document).ready(function() {
                     countTo = $this.attr('data-count'),
                     suffix = $this.attr('suffix');
 
-                $({
-
-                    countNum: $this.text()
-                }).animate({
-                        countNum: countTo
+                $({countNum: 0}).animate( // start value
+                    {
+                        countNum: countTo // end value
                     },
                     {
-                        duration: 2000,
+                        duration: 3000,
                         easing: 'swing',
-                        step: function() {
+                        queue: false,
+                        step: function(current) {
+
+                            $('.fill').css({
+                                strokeDashoffset: 2160 * (1 - (current / countTo)), // 2160 calculate dynamically, .getTotalLength()
+                                transition: "stroke-dashoffset 200ms linear"
+
+                        });
                             $this.text(Math.floor(this.countNum)+suffix);
                         },
                         complete: function() {
+                            $('.fill').css({
+                                strokeDashoffset:  '0'
+                            });
                             $this.text(this.countNum+suffix);
+
                         }
 
                     });

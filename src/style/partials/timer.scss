@@ -35,19 +35,21 @@
     .counter {
       width: 250px;
       height: 240px;
-      //.track,
-      //.fill {
-      //  fill: rgba(0, 0, 0, 0);
-      //  stroke-width: 30;
-      //  transform: translate(290px, 800px)rotate(-120deg);
-      //}
-      //
-      //.fill {
-      //    stroke: rgb(255, 255, 255);
-      //    stroke-linecap: round;
-      //    stroke-dasharray: 2160;
-      //    stroke-dashoffset: 2160;
-      //  }
+      .track,
+      .fill {
+        fill: rgba(0, 0, 0, 0);
+        stroke: map_get($color-scheme-one, snow-white);
+        stroke-width: 8;
+        transform: translate(290px, 800px)rotate(-120deg);
+      }
+
+      .fill {
+          stroke: map_get($color-scheme-one, bright-orange);
+          stroke-linecap: round;
+          stroke-dasharray: 2160;
+          stroke-dashoffset: 2160;
+          transition: stroke-dashoffset 1s;
+        }
     }
 
   }
