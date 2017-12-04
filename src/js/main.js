@@ -18,4 +18,5 @@
 //= ../../bower_components/bootstrap/js/dist/popover.js
 
 
+//= partials/parallax.js
 //= partials/app.js

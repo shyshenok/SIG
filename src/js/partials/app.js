@@ -25,6 +25,10 @@ $(document).ready(function() {
     $(window).resize(setBackground);
     setBackground();
 
+    $('.parallax-window-header').parallax({
+        imageSrc: "../../image/12.jpg"
+    });
+
     var a = 0;
     $(window).scroll(function() {
 
@@ -36,46 +40,52 @@ $(document).ready(function() {
                 parentEl.append("<path class='track' d='M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z'></path>" +
                     "<path class='fill' d='M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z'></path>" );
                 parentEl.html(parentEl.html());
+
+                animateCounterHexagon();
             });
-            $('.counter-value').each(function() {
 
-                var $this = $(this),
-                    countTo = $this.attr('data-count'),
-                    suffix = $this.attr('suffix');
-
-                $({countNum: 0}).animate( // start value
-                    {
-                        countNum: countTo // end value
-                    },
-                    {
-                        duration: 3000,
-                        easing: 'swing',
-                        queue: false,
-                        step: function(current) {
-
-                            $('.fill').css({
-                                strokeDashoffset: 2160 * (1 - (current / countTo)), // 2160 calculate dynamically, .getTotalLength()
-                                transition: "stroke-dashoffset 200ms linear"
-
-                        });
-                            $this.text(Math.floor(this.countNum)+suffix);
-                        },
-                        complete: function() {
-                            $('.fill').css({
-                                strokeDashoffset:  '0'
-                            });
-                            $this.text(this.countNum+suffix);
-
-                        }
-
-                    });
-            });
             a = 1;
         }
 
     });
 
 });
+
+function animateCounterHexagon() {
+    $('.counter-value').each(function() {
+
+        var $this = $(this),
+            countTo = $this.attr('data-count'),
+            suffix = $this.attr('suffix');
+
+        $({countNum: 0}).animate( // start value
+            {
+                countNum: countTo // end value
+            },
+            {
+                duration: 3000,
+                easing: 'swing',
+                queue: false,
+                step: function(current) {
+
+                    $('.fill').css({
+                        strokeDashoffset: 2160 * (1 - (current / countTo)), // 2160 calculate dynamically, .getTotalLength()
+                        transition: "stroke-dashoffset 200ms linear"
+
+                    });
+                    $this.text(Math.floor(this.countNum)+suffix);
+                },
+                complete: function() {
+                    $('.fill').css({
+                        strokeDashoffset:  '0'
+                    });
+                    $this.text(this.countNum+suffix);
+
+                }
+
+            });
+    });
+}
 
 function setBackground() {
     var width = $(window).width();

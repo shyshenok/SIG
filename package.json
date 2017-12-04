@@ -6,7 +6,8 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.8.11",
-    "imagemin-pngquant": "^5.0.1"
+    "imagemin-pngquant": "^5.0.1",
+    "jquery-parallax.js": "^1.5.0"
   },
   "devDependencies": {
     "browser-sync": "^2.2.3",
