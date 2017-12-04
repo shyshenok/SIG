@@ -1,7 +1,5 @@
 .wrapper-header {
 
-
-
   .jumbotron {
     background: linear-gradient(
                     rgba(map_get($color-scheme-one, pale-turquoise), 0.2),
@@ -46,7 +44,7 @@
         text-align: left;
         padding: 0;
         @media(min-width: 768px) {
-          font-size: 30px;
+          font-size: $bigest-text;
         }
       }
 
