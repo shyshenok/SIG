@@ -1,0 +1,81 @@
+.wrapper-product-category {
+  .row {
+    margin: 0 ;
+    border-top: 40px solid map_get($color-scheme-one, dirty-blue);
+    border-bottom: 40px solid map_get($color-scheme-one, dirty-blue);
+    .product-block {
+      color: map_get($color-scheme-one, dirty-blue);
+      padding: 40px 8px;
+
+      .wrapper-square{
+        background-color: lighten(map_get($color-scheme-one, peach), 12%);
+        border-radius: 6px;
+        padding: 0;
+        box-shadow: 0px 2px 8px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
+      }
+
+      .image-wrapper {
+        height: 100%;
+        width: 200px;
+        margin: 0 auto;
+      }
+
+      h3 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 12px 0;
+        background-color: map_get($color-scheme-one, ginger);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        color: map_get($color-scheme-one, snow-white);
+      }
+
+      .content-container {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        padding: 10px 0 0;
+        background-color: map_get($color-scheme-one, snow-white);
+        p {
+          #text {
+            display: none;
+            cursor : pointer;
+
+          }
+          #toggle {
+            color: map_get($color-scheme-one, ginger);
+            cursor : pointer;
+          }
+          padding: 0 20px;
+          strong {
+            font-weight: 700;
+            color: darken(map_get($color-scheme-one, dirty-blue), 30%);
+          }
+        }
+
+        .btn-orange {
+          padding: 12px;
+          color: map_get($color-scheme-one, snow-white);
+          background-color: map_get($color-scheme-one, ginger);
+          border-color: map_get($color-scheme-one, ginger);
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          width: 100%;
+          font-size: 20px;
+          font-weight: 700;
+
+          &:hover {
+            background-color: map_get($color-scheme-one, bright-orange);
+            border-color: map_get($color-scheme-one, bright-orange);
+          }
+
+          &:focus {
+            background-color: map_get($color-scheme-one, bright-orange);
+            border-color: map_get($color-scheme-one, bright-orange);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}

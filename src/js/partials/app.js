@@ -6,15 +6,15 @@
 var languages = [
     {
         name: "English",
-        image: "../image/eng.png"
+        image: "/image/eng.png"
     },
     {
         name: "Russian",
-        image: "../image/ru.png"
+        image: "/image/ru.png"
     },
     {
         name: "Ukrainian",
-        image: "../image/uk.png"
+        image: "/image/uk.png"
     }
 ];
 
@@ -26,28 +26,9 @@ $(document).ready(function() {
     setBackground();
 
     $('.parallax-window-header').parallax({
-        imageSrc: "../../image/12.jpg"
+        imageSrc: "/image/12.jpg"
     });
 
-    var a = 0;
-    $(window).scroll(function() {
-
-        var oTop = $('#counter').offset().top - window.innerHeight;
-
-        if (a === 0 && $(window).scrollTop() > oTop) {
-            $('.counter').each(function (){
-                var parentEl = $(this);
-                parentEl.append("<path class='track' d='M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z'></path>" +
-                    "<path class='fill' d='M723 314L543 625.77 183 625.77 3 314 183 2.23 543 2.23 723 314z'></path>" );
-                parentEl.html(parentEl.html());
-
-                animateCounterHexagon();
-            });
-
-            a = 1;
-        }
-
-    });
 
     $("[href='#products']").on('click', function(event) {
 
@@ -64,43 +45,20 @@ $(document).ready(function() {
         }
     });
 
-});
-
-function animateCounterHexagon() {
-    $('.counter-value').each(function() {
-
-        var $this = $(this),
-            countTo = $this.attr('data-count'),
-            suffix = $this.attr('suffix');
-
-        $({countNum: 0}).animate( // start value
-            {
-                countNum: countTo // end value
-            },
-            {
-                duration: 3000,
-                easing: 'swing',
-                queue: false,
-                step: function(current) {
-
-                    $('.fill').css({
-                        strokeDashoffset: 2160 * (1 - (current / countTo)), // 2160 calculate dynamically, .getTotalLength()
-                        transition: "stroke-dashoffset 200ms linear"
-
-                    });
-                    $this.text(Math.floor(this.countNum)+suffix);
-                },
-                complete: function() {
-                    $('.fill').css({
-                        strokeDashoffset:  '0'
-                    });
-                    $this.text(this.countNum+suffix);
-
-                }
-
-            });
+    $("#toggle").click(function() {
+        var elem = $("#toggle").text();
+        if (elem === "Read More...") {
+            //Stuff to do when btn is in the read more state
+            $("#toggle").text("Read Less");
+            $("#text").slideDown();
+        } else {
+            //Stuff to do when btn is in the read less state
+            $("#toggle").text("Read More...");
+            $("#text").slideUp();
+        }
     });
-}
+
+});
 
 function setBackground() {
     var width = $(window).width();

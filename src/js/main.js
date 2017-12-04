@@ -20,3 +20,4 @@
 
 //= partials/parallax.js
 //= partials/app.js
+//= partials/animateHex.js
