@@ -74,6 +74,7 @@
     .down-arrow {
       display: none;
       @media (min-width: 992px) {
+        transition: 1s ease;
         display: block;
         font-size: 50px;
         position: absolute;
@@ -82,6 +83,9 @@
         left: 50%;
         color: map_get($color-scheme-one, snow-white);
         animation: bounce 1.5s infinite;
+      }
+      a {
+        transition: 1s ease;
       }
     }
   }
