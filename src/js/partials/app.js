@@ -58,6 +58,17 @@ $(document).ready(function() {
         }
     });
 
+    $('.wrapper-product-category').find("#table").click(function () {
+        $(".product-block").removeClass('product-block').addClass("product-table");
+        $(".wrapper-square").removeClass('wrapper-square').addClass("wrapper-line");
+    });
+
+    $('.wrapper-product-category').find("#block").click(function () {
+        $(".product-table").removeClass('product-table').addClass("product-block");
+        $(".wrapper-line").removeClass('wrapper-line').addClass("wrapper-square");
+
+    });
+
 });
 
 function setBackground() {
