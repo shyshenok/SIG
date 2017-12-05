@@ -59,11 +59,15 @@ $(document).ready(function() {
     });
 
     $('.wrapper-product-category').find("#table").click(function () {
+        $('#block').removeClass('active');
+        $('#table').addClass('active');
         $(".product-block").removeClass('product-block').addClass("product-table");
         $(".wrapper-square").removeClass('wrapper-square').addClass("wrapper-line");
     });
 
     $('.wrapper-product-category').find("#block").click(function () {
+        $('#table').removeClass('active');
+        $('#block').addClass('active');
         $(".product-table").removeClass('product-table').addClass("product-block");
         $(".wrapper-line").removeClass('wrapper-line').addClass("wrapper-square");
 
