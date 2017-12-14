@@ -1,0 +1,127 @@
+.wrapper-details {
+  color: map_get($color-scheme-one, dirty-blue);
+
+  .row {
+    margin: 0;
+    @media(min-width: 768px) {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  .product-details-wrapper {
+    padding: 0 0 40px;
+  }
+
+  .product-image {
+    order: 1;
+    margin: 0 auto;
+  }
+
+  .small-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    cursor: pointer;
+    img{
+      height: 100%;
+      margin: 8px;
+      width: 60px;
+    }
+  }
+
+
+  .image-wrapper {
+    height: 100%;
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  .license-slider{
+    order: 3;
+    background-color: lighten(map_get($color-scheme-one, peach), 13%);
+    border: 1px solid map_get($color-scheme-one, dirty-blue);
+    border-radius: $border-radius;
+    margin: 0 auto;
+    @media(min-width: 992px) {
+      order: 2;
+    }
+    .slider {
+      margin: 20px auto;
+      height: 440px;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      .slide {
+        height: auto;
+        display: none;
+        margin-bottom: 0;
+        .image-wrapper{
+          width: 300px;
+          img {
+            height: 440px;
+            border: 1px solid map_get($color-scheme-one, dirty-blue);
+            padding: 6px;
+            border-radius: $border-radius;
+
+          }
+        }
+      }
+    }
+    .prev,
+    .next {
+      color: map_get($color-scheme-one, bright-orange);
+      text-decoration: none;
+      line-height: 1;
+      padding: 10px 20px;
+      position: absolute;
+      top: calc(50% - 20px);
+      i {
+        font-size: 40px;
+      }
+    }
+    .prev {
+      left: 0;
+    }
+    .next{
+      right: 0;
+    }
+  }
+
+  .detailse-info {
+    padding: 20px 0 60px;
+    order: 2;
+    @media(min-width: 992px){
+      order: 3;
+    }
+    .item {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      .name-item,
+      .item-value {
+        margin: 8px 0;
+        word-break: break-word;
+        border-bottom: 1px solid lighten(map_get($color-scheme-one, dirty-blue), 50%);
+        padding: 4px;
+      }
+      .name-item {
+        max-width: 40%;
+        width: 40%;
+        @media(min-width: 992px) {
+          max-width: 35%;
+          width: 34%;
+        }
+        border-right: 1px solid lighten(map_get($color-scheme-one, dirty-blue), 50%);
+
+      }
+      .item-value {
+        max-width: 60%;
+        width: 60%;
+        @media(min-width: 992px) {
+          max-width: 65%;
+          width: 65%;
+        }
+      }
+    }
+  }
+}
