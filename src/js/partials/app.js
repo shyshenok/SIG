@@ -108,6 +108,6 @@ function addSelectLanguage() {
                                     languages[i].name + "<img class='lang-icon' src=" +
                                     languages[i].image + " alt='English'></p>");
     }
-
 }
+
 
