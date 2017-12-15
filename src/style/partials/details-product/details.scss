@@ -36,195 +36,224 @@
     margin: 0 auto;
   }
 
-  .license-slider{
-    order: 3;
-    background-color: lighten(map_get($color-scheme-one, peach), 13%);
-    border: 1px solid map_get($color-scheme-one, dirty-blue);
-    border-radius: $border-radius;
-    margin: 0 auto;
-    @media(min-width: 992px) {
-      order: 2;
-    }
-    .slider {
-      margin: 20px auto;
-      height: 440px;
-      overflow: hidden;
-      width: 100%;
-      position: relative;
-      .slide {
-        height: auto;
-        display: none;
-        margin-bottom: 0;
-        .image-wrapper{
-          width: 300px;
-          img {
-            height: 440px;
-            border: 1px solid map_get($color-scheme-one, dirty-blue);
-            padding: 6px;
-            border-radius: $border-radius;
+  .tabs-wrapper {
+    padding: 20px 0;
+    .license {
+      padding: 20px 0 60px;
+      .license-slider{
+        order: 3;
+        background-color: lighten(map_get($color-scheme-one, peach), 13%);
+        border: 1px solid map_get($color-scheme-one, dirty-blue);
+        border-radius: $border-radius;
+        margin: 20px 0;
+        @media(min-width: 992px) {
+          order: 2;
+        }
+        .slider {
+          margin: 20px auto;
+          height: 440px;
+          overflow: hidden;
+          width: 100%;
+          position: relative;
+          .slide {
+            height: auto;
+            display: none;
+            margin-bottom: 0;
+            .image-wrapper{
+              width: 300px;
+              img {
+                height: 440px;
+                border: 1px solid map_get($color-scheme-one, dirty-blue);
+                padding: 6px;
+                border-radius: $border-radius;
 
+              }
+            }
+          }
+        }
+        .prev,
+        .next {
+          color: map_get($color-scheme-one, bright-orange);
+          text-decoration: none;
+          line-height: 1;
+          padding: 10px 20px;
+          position: absolute;
+          top: calc(50% - 20px);
+          i {
+            font-size: 40px;
+          }
+        }
+        .prev {
+          left: 0;
+        }
+        .next{
+          right: 0;
+        }
+      }
+
+      .downloads {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 20px;
+        h3 {
+          font-size: $primary-text;
+        }
+        a {
+          color: lighten(map_get($color-scheme-one, dirty-blue), 10%);
+          border-bottom: 1px solid transparent;
+          &:hover {
+            color: map_get($color-scheme-one, dirty-blue);
+            text-decoration: none;
+            border-bottom: 1px solid map_get($color-scheme-one, dirty-blue);
           }
         }
       }
     }
-    .prev,
-    .next {
-      color: map_get($color-scheme-one, bright-orange);
-      text-decoration: none;
-      line-height: 1;
-      padding: 10px 20px;
-      position: absolute;
-      top: calc(50% - 20px);
-      i {
-        font-size: 40px;
-      }
-    }
-    .prev {
-      left: 0;
-    }
-    .next{
-      right: 0;
-    }
-  }
 
-  .detailse-info {
-    padding: 20px 0 60px;
-    order: 2;
-    @media(min-width: 992px){
-      order: 3;
-    }
-    .item {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      .name-item,
-      .item-value {
-        margin: 8px 0;
-        word-break: break-word;
-        border-bottom: 1px solid lighten(map_get($color-scheme-one, dirty-blue), 50%);
-        padding: 4px;
+    .detailse-info {
+      padding: 20px 0 60px;
+      order: 2;
+      @media(min-width: 992px){
+        order: 3;
       }
-      .name-item {
-        max-width: 40%;
-        width: 40%;
-        @media(min-width: 992px) {
-          max-width: 35%;
-          width: 34%;
+      .item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .name-item,
+        .item-value {
+          margin: 8px 0;
+          word-break: break-word;
+          border-bottom: 1px solid lighten(map_get($color-scheme-one, dirty-blue), 50%);
+          padding: 4px;
         }
-        border-right: 1px solid lighten(map_get($color-scheme-one, dirty-blue), 50%);
+        .name-item {
+          max-width: 40%;
+          width: 40%;
+          @media(min-width: 992px) {
+            max-width: 35%;
+            width: 34%;
+          }
+          border-right: 1px solid lighten(map_get($color-scheme-one, dirty-blue), 50%);
 
-      }
-      .item-value {
-        max-width: 60%;
-        width: 60%;
-        @media(min-width: 992px) {
-          max-width: 65%;
-          width: 65%;
+        }
+        .item-value {
+          max-width: 60%;
+          width: 60%;
+          @media(min-width: 992px) {
+            max-width: 65%;
+            width: 65%;
+          }
         }
       }
     }
-  }
 
-  .product-block {
-    color: map_get($color-scheme-one, dirty-blue);
-    padding: 20px 8px;
-    @media (min-width: 992px) {
-      padding: 20px 16px 40px;
-    }
-
-    .wrapper-square {
-      background-color: lighten(map_get($color-scheme-one, peach), 12%);
-      border-radius: $border-radius;
-      padding: 0;
-      box-shadow: 0 2px 8px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
-    }
-
-    .image-wrapper {
-      height: 100%;
-      width: 200px;
-      margin: 0 auto;
-    }
-
-    .name-block {
-      text-align: center;
-      padding: 12px 0;
-      background-color: map_get($color-scheme-one, dirty-blue);
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-      color: map_get($color-scheme-one, snow-white);
-    }
-
-    .name-table {
-      display: none;
-    }
-
-    .content-container {
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
-      padding: 10px 0 0;
-      background-color: map_get($color-scheme-one, snow-white);
-      p {
-        padding: 0 20px;
-      }
-    }
-    .btn-orange {
-      padding: 12px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      width: 100%;
-      color: map_get($color-scheme-one, snow-white);
-      background-color: map_get($color-scheme-one, ginger);
-      border-color: map_get($color-scheme-one, ginger);
-      font-size: $small-header;
-      font-weight: 700;
-      &:hover {
-        background-color: map_get($color-scheme-one, bright-orange);
-        border-color: map_get($color-scheme-one, bright-orange);
+    .product-block {
+      color: map_get($color-scheme-one, dirty-blue);
+      padding: 20px 8px;
+      @media (min-width: 992px) {
+        padding: 20px 16px 60px;
       }
 
-      &:focus {
-        background-color: map_get($color-scheme-one, bright-orange);
-        border-color: map_get($color-scheme-one, bright-orange);
-        box-shadow: none;
+      .wrapper-square {
+        background-color: lighten(map_get($color-scheme-one, peach), 12%);
+        border-radius: $border-radius;
+        padding: 0;
+        box-shadow: 0 2px 8px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
       }
-    }
-    p {
-      font-size: $simple-text;
-      #text {
+
+      .image-wrapper {
+        height: 100%;
+        width: 200px;
+        margin: 0 auto;
+      }
+
+      .name-block {
+        text-align: center;
+        padding: 12px 0;
+        background-color: map_get($color-scheme-one, dirty-blue);
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        color: map_get($color-scheme-one, snow-white);
+      }
+
+      .name-table {
         display: none;
-        cursor : pointer;
-
-      }
-      #toggle {
-        color: map_get($color-scheme-one, ginger);
-        cursor : pointer;
       }
 
-      strong {
+      .content-container {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        padding: 10px 0 0;
+        background-color: map_get($color-scheme-one, snow-white);
+        p {
+          padding: 0 20px;
+        }
+      }
+      .btn-orange {
+        padding: 12px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 100%;
+        color: map_get($color-scheme-one, snow-white);
+        background-color: map_get($color-scheme-one, ginger);
+        border-color: map_get($color-scheme-one, ginger);
+        font-size: $small-header;
         font-weight: 700;
-        color: darken(map_get($color-scheme-one, dirty-blue), 30%);
+        &:hover {
+          background-color: map_get($color-scheme-one, bright-orange);
+          border-color: map_get($color-scheme-one, bright-orange);
+        }
+
+        &:focus {
+          background-color: map_get($color-scheme-one, bright-orange);
+          border-color: map_get($color-scheme-one, bright-orange);
+          box-shadow: none;
+        }
+      }
+      p {
+        font-size: $simple-text;
+        #text {
+          display: none;
+          cursor : pointer;
+
+        }
+        #toggle {
+          color: map_get($color-scheme-one, ginger);
+          cursor : pointer;
+        }
+
+        strong {
+          font-weight: 700;
+          color: darken(map_get($color-scheme-one, dirty-blue), 30%);
+        }
       }
     }
-  }
 
-  .faq-block {
-    display: flex;
-    flex-flow: row nowrap;
-    padding: 10px 16px;
-    margin: 20px 0;
-    box-shadow: 1px 1px 2px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
-    i {
-      font-size: 44px;
-      color: map_get($color-scheme-one, bright-orange);
-      padding:0 20px 0 8px;
+    #nav-faq {
+      padding: 20px 0 60px;
     }
-    h4 {
-      font-size: $small-header;
-      cursor: pointer;
-    }
-    .answer {
-      font-size: $small-text;
-      display: none;
+
+    .faq-block {
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 10px 16px;
+      margin: 20px 0;
+      box-shadow: 1px 1px 2px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
+      i {
+        font-size: 44px;
+        color: map_get($color-scheme-one, bright-orange);
+        padding:0 20px 0 8px;
+      }
+      h4 {
+        font-size: $small-header;
+        cursor: pointer;
+      }
+      .answer {
+        font-size: $small-text;
+        display: none;
+      }
     }
   }
 }
