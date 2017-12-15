@@ -73,6 +73,13 @@ $(document).ready(function() {
 
     });
 
+
+    $(".faq-block").click(function(event){
+        var currentTarget = $(event.currentTarget); // event.target
+        currentTarget.find(".answer").slideToggle("fast");
+
+    });
+
 });
 
 function setBackground() {

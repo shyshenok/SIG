@@ -124,4 +124,107 @@
       }
     }
   }
+
+  .product-block {
+    color: map_get($color-scheme-one, dirty-blue);
+    padding: 20px 8px;
+    @media (min-width: 992px) {
+      padding: 20px 16px 40px;
+    }
+
+    .wrapper-square {
+      background-color: lighten(map_get($color-scheme-one, peach), 12%);
+      border-radius: $border-radius;
+      padding: 0;
+      box-shadow: 0 2px 8px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
+    }
+
+    .image-wrapper {
+      height: 100%;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .name-block {
+      text-align: center;
+      padding: 12px 0;
+      background-color: map_get($color-scheme-one, dirty-blue);
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      color: map_get($color-scheme-one, snow-white);
+    }
+
+    .name-table {
+      display: none;
+    }
+
+    .content-container {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      padding: 10px 0 0;
+      background-color: map_get($color-scheme-one, snow-white);
+      p {
+        padding: 0 20px;
+      }
+    }
+    .btn-orange {
+      padding: 12px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      width: 100%;
+      color: map_get($color-scheme-one, snow-white);
+      background-color: map_get($color-scheme-one, ginger);
+      border-color: map_get($color-scheme-one, ginger);
+      font-size: $small-header;
+      font-weight: 700;
+      &:hover {
+        background-color: map_get($color-scheme-one, bright-orange);
+        border-color: map_get($color-scheme-one, bright-orange);
+      }
+
+      &:focus {
+        background-color: map_get($color-scheme-one, bright-orange);
+        border-color: map_get($color-scheme-one, bright-orange);
+        box-shadow: none;
+      }
+    }
+    p {
+      font-size: $simple-text;
+      #text {
+        display: none;
+        cursor : pointer;
+
+      }
+      #toggle {
+        color: map_get($color-scheme-one, ginger);
+        cursor : pointer;
+      }
+
+      strong {
+        font-weight: 700;
+        color: darken(map_get($color-scheme-one, dirty-blue), 30%);
+      }
+    }
+  }
+
+  .faq-block {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 16px;
+    margin: 20px 0;
+    box-shadow: 1px 1px 2px rgba(map_get($color-scheme-one, dirty-blue), 0.8);
+    i {
+      font-size: 44px;
+      color: map_get($color-scheme-one, bright-orange);
+      padding:0 20px 0 8px;
+    }
+    h4 {
+      font-size: $small-header;
+      cursor: pointer;
+    }
+    .answer {
+      font-size: $small-text;
+      display: none;
+    }
+  }
 }
