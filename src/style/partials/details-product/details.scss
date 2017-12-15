@@ -38,6 +38,20 @@
 
   .tabs-wrapper {
     padding: 20px 0;
+
+    a {
+      color: map_get($color-scheme-one, dirty-blue);
+      &:hover {
+        color: map_get($color-scheme-one, ginger)
+      }
+    }
+    #nav-char-tab.active,
+    #nav-addinggoods-tab.active,
+    #nav-license-tab.active,
+    #nav-faq-tab.active {
+      color: map_get($color-scheme-one, bright-orange);
+    }
+
     .license {
       padding: 20px 0 60px;
       .license-slider{
