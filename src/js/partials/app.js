@@ -84,7 +84,7 @@ $(document).ready(function() {
 
 function setBackground() {
     var width = $(window).width();
-    var height = $(window).height()- $(".wrapper-navigation").height();
+    var height = $(window).height();
     if(width >= 992) {
         $('.jumbotron').css({
             'height' : height,

@@ -15,18 +15,18 @@
       border-bottom: 4px solid map_get($color-scheme-one, snow-white);
     }
 
-    .border-square{
-        align-self: center;
-        justify-self: center;
-        @media(min-width: 667px) {
-          @include button(map_get($color-scheme-one, snow-white));
-        }
+    .border-square {
+      align-self: center;
+      justify-self: center;
+      @media(min-width: 667px) {
         @include button(map_get($color-scheme-one, snow-white));
-        @include svg-rectangle((600, 0), 2, 1s);
-        &:hover {
-          @include animate-hover-button(3, (0, 600), 0, 1.05, map_get($color-scheme-one, dirty-blue));
-
-        }
+      }
+      @include button(map_get($color-scheme-one, snow-white));
+      @include svg-rectangle((600, 0), 2, 1s);
+      &:hover {
+        @include animate-hover-button(4, (0, 600), 0, 1.05, map_get($color-scheme-one, dirty-blue));
+        border: 1px solid;
+      }
     }
 
     div {
@@ -39,6 +39,7 @@
       justify-content: center;
       transition: 0.3s ease;
       transform: scale(0.95,0.95);
+      box-shadow: 4px 4px 1px -2px  darken(map_get($color-scheme-one, dirty-blue), 10%);
     }
 
     h3 {
@@ -57,37 +58,40 @@
       color: map_get($color-scheme-one, snow-white);
       position: absolute;
       bottom: 10%;
+      border: 1px solid  map_get($color-scheme-one, snow-white);
+      border-radius: 2px;
+      box-shadow: 4px 4px 1px -2px darken(map_get($color-scheme-one, dirty-blue), 10%);
+      padding: 12px 15px;
+      padding: 12px 15px;
+      min-width: 150px;
+      &:hover {
+        letter-spacing: 1px;
+        box-shadow: 6px 6px 1px -2px darken(map_get($color-scheme-one, dirty-blue), 10%);
+
+      }
     }
 
     .btn-blue {
       background-color: map_get($color-scheme-one, pale-diry-blue);
-      border-color: map_get($color-scheme-one, pale-diry-blue);
 
       &:hover {
         background-color: map_get($color-scheme-one, dirty-blue);
-        border-color: map_get($color-scheme-one, dirty-blue);
       }
 
       &:focus {
         background-color: map_get($color-scheme-one, dirty-blue);
-        border-color: map_get($color-scheme-one, dirty-blue);
-        box-shadow: none;
       }
     }
 
     .btn-orange {
       background-color: map_get($color-scheme-one, ginger);
-      border-color: map_get($color-scheme-one, ginger);
 
       &:hover {
         background-color: map_get($color-scheme-one, bright-orange);
-        border-color: map_get($color-scheme-one, bright-orange);
       }
 
       &:focus {
         background-color: map_get($color-scheme-one, bright-orange);
-        border-color: map_get($color-scheme-one, bright-orange);
-        box-shadow: none;
       }
     }
     &:hover {
@@ -108,10 +112,9 @@
     }
     &:hover {
       background: lighten(rgba(map_get($color-scheme-one, bright-orange), 0.9), 10%);
-
     }
-
   }
+
   .block-2{
     background: linear-gradient(rgba(map_get($color-scheme-one, pale-diry-blue), 1),
                                 rgba(map_get($color-scheme-one, pale-diry-blue), 1));
@@ -130,6 +133,7 @@
       background: lighten(rgba(map_get($color-scheme-one, pale-diry-blue), 0.9), 5%);
     }
   }
+
   .block-3 {
     background: linear-gradient(rgba(map_get($color-scheme-one, ginger), 1),
                                 rgba(map_get($color-scheme-one, ginger), 1));
@@ -144,11 +148,11 @@
       border-bottom: none;
       border-top: none;
     }
-
     &:hover {
       background: lighten(rgba(map_get($color-scheme-one, ginger), 0.9), 5%);
     }
   }
+
   .block-4 {
     background: linear-gradient(rgba(map_get($color-scheme-one, dirty-blue), 1),
             rgba(map_get($color-scheme-one, dirty-blue), 1));
@@ -167,6 +171,7 @@
       background: lighten(rgba(map_get($color-scheme-one, dirty-blue), 0.9), 5%);
     }
   }
+
   .block-5 {
     background: linear-gradient(rgba(map_get($color-scheme-one, sun-yellow), 1),
             rgba(map_get($color-scheme-one, sun-yellow), 1));
@@ -179,6 +184,7 @@
       background: lighten(rgba(map_get($color-scheme-one, sun-yellow), 0.8), 5%);
     }
   }
+
   .block-6 {
     background: linear-gradient(rgba(map_get($color-scheme-one, dark-grey), 1),
             rgba(map_get($color-scheme-one, dark-grey), 1));
